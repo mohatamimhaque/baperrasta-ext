@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <title>বাপের রাস্তা - ১০০% ব্যাটারি ও মাউস ড্রাইভ</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-row">
+        <span class="icon">🛺⚡</span>
+        <div>
+          <h1 class="title">বাপের রাস্তা</h1>
+          <p class="subtitle">100% Battery & Mouse Drive</p>
+        </div>
+      </div>
+      <span class="status-pill active" id="statusPill">ACTIVE</span>
+    </header>
+
+    <!-- Main Battery HUD Card -->
+    <div class="card batt-card">
+      <div class="card-top">
+        <span class="label">ব্যাটারি স্ট্যাটাস</span>
+        <span class="batt-val" id="battPercentDisplay">১০০%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="battBarFill"></div>
+      </div>
+      <div class="card-features">
+        <div class="feature-item">
+          <span class="feat-dot"></span>
+          <span>চার্জ কমানো বন্ধ (Locked 100%)</span>
+        </div>
+        <div class="feature-item">
+          <span class="feat-dot"></span>
+          <span>প্যাডেল মোড সম্পূর্ণ নিষ্ক্রিয়</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mouse Drive Card -->
+    <div class="card mouse-card">
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">🖱️ মাউস ড্রাইভ (Mouse Control)</span>
+          <span class="toggle-desc">সামনে=গতি ⬆️, পেছনে=ব্রেক ⬇️, বাম/ডান=ঘোরান 🔄</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggleMouse" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="mouse-rules">
+        <div class="rule-badge">🔒 মাউস স্থির = গতি ও দিক লক</div>
+        <div class="rule-badge">🎯 ক্যানভাসে ক্লিক = কার্সর লক</div>
+      </div>
+
+      <!-- Sensitivity Sliders -->
+      <div class="sliders-section">
+        <div class="slider-row">
+          <span class="slider-label">ঘোরানোর সেনসিটিভিটি (Steer)</span>
+          <input type="range" id="steerSensitivity" min="1" max="10" value="4" class="range-input">
+        </div>
+        <div class="slider-row">
+          <span class="slider-label">গতি বৃদ্ধির সেনসিটিভিটি (Speed)</span>
+          <input type="range" id="speedSensitivity" min="1" max="10" value="5" class="range-input">
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls-card">
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">⚡ ব্যাটারি লক ১০০%</span>
+          <span class="toggle-desc">সর্বদা ১০০% ব্যাটারি ধরে রাখবে</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggleBattery" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-rocket" id="btnRocket">
+          <span class="btn-icon">🚀</span> টেসলা রকেট ২ সে. (CTRL)
+        </button>
+        <button class="btn btn-primary" id="btnRefill">
+          <span class="btn-icon">⚡</span> ফুল রিফিল (Refill Now)
+        </button>
+        <button class="btn btn-secondary" id="btnLaunch">
+          <span class="btn-icon">🎮</span> baperrasta.com খুলুন
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Help & Shortcuts -->
+    <div class="footer">
+      <div class="shortcut-tip">
+        <b>💡 মাউস ও রকেট গাইড:</b> <kbd>Ctrl</kbd> চাপলে ২ সেকেন্ড রকেট জাম্প। মাউস স্থির থাকলে গতি ও দিক লক।<br>
+        <span style="color:#ff8a96;">⚠️ বাস বা ট্রাকে লাগলে রকেট কাজ করবে না (Fatal)।</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
